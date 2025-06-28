@@ -2,8 +2,11 @@
   "name": "server",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "ts-node index.ts"
+    "dev": "ts-node index.ts",
+    "build": "vite build --config ../vite.config.server.ts",
+    "start": "node dist/server/node-build.mjs"
   },
   "keywords": [],
   "author": "",
