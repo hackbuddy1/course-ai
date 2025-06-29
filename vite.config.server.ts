@@ -5,9 +5,9 @@ import path from "path";
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "erver/index.ts"),
-      name: "server",
-      fileName: "production",
+      entry: path.resolve(__dirname, "server/index.ts"), // ✅ fixed path
+      name: "node-build", // Optional, just matches your filename
+      fileName: () => "node-build.mjs", // ✅ consistent filename
       formats: ["es"],
     },
     outDir: "dist/server",
@@ -15,30 +15,16 @@ export default defineConfig({
     ssr: true,
     rollupOptions: {
       external: [
-        // Node.js built-ins
-        "fs",
-        "path",
-        "url",
-        "http",
-        "https",
-        "os",
-        "crypto",
-        "stream",
-        "util",
-        "events",
-        "buffer",
-        "querystring",
-        "child_process",
-        // External dependencies that should not be bundled
-        "express",
-        "cors",
+        "fs", "path", "url", "http", "https", "os", "crypto", "stream",
+        "util", "events", "buffer", "querystring", "child_process",
+        "express", "cors"
       ],
       output: {
         format: "es",
         entryFileNames: "[name].mjs",
       },
     },
-    minify: false, // Keep readable for debugging
+    minify: false,
     sourcemap: true,
   },
   resolve: {
