@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
-import { handleDemo } from "./routes/demo";
-import { handleGenerateCourse } from "./routes/generateCourse";
+import { handleDemo } from "./routes/demo.js";
+import { handleGenerateCourse } from "./routes/generateCourse.js";
 
 export function createServer() {
   const app = express();

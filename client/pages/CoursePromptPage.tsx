@@ -11,7 +11,7 @@ export default function CoursePromptPage() {
   headers: {
     "Content-Type": "application/json",
   },
-  body: JSON.stringify({ prompt }),
+  body: JSON.stringify({ prompt : 'your course topic' }),
 });
 
     const data = await response.json();

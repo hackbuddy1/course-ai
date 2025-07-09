@@ -2,7 +2,7 @@ import { RequestHandler } from "express";
 import axios from "axios";
 
 const YOUTUBE_API_KEY = "AIzaSyCJj1-E24vK_lMKZimd1Z3zNYM2PKV0WM0";
-const SERP_API_KEY = "5d1dd5a5371ec61df23a66d6f5fb682a62b415777dea5f0adf6d9d2b8291756b"; // 🔁 Replace this with your real key
+const SERP_API_KEY = "5d1dd5a5371ec61df23a66d6f5fb682a62b415777dea5f0adf6d9d2b8291756b"; // 
 
 // ✅ Define expected response structure from YouTube
 interface YouTubeSearchResponse {
