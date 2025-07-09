@@ -38,10 +38,12 @@ export default function Course() {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        const response = await axios.post<CourseResponse>(
-          "/api/generate-course",
-          { prompt: topic }
-        );
+        const BASE_URL = import.meta.env.VITE_API_URL;
+
+const response = await axios.post<CourseResponse>(
+  `${BASE_URL}/api/generate-course`,
+  { prompt: topic }
+);
         setCourseData(response.data);
       } catch (err) {
         console.error("Error fetching course:", err);
