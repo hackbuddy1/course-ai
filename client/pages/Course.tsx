@@ -39,11 +39,10 @@ export default function Course() {
     const fetchCourse = async () => {
       try {
         const BASE_URL = import.meta.env.VITE_API_URL;
-
-const response = await axios.post<CourseResponse>(
-  `${BASE_URL}/api/generate-course`,
-  { prompt: topic }
-);
+        console.log("💡 Using BASE_URL:", BASE_URL);
+        const response = await axios.post<CourseResponse>(`${BASE_URL}/api/generate-course`, {
+          prompt: topic,
+  });
         setCourseData(response.data);
       } catch (err) {
         console.error("Error fetching course:", err);
