@@ -5,7 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 
 export default defineConfig({
-  root: "./client",
+  
   server: {
     proxy: {
       // Any request starting with '/api' will be forwarded
