@@ -1,28 +1,26 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import path from 'path'; // <-- Import the 'path' module from Node.js
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-      },
-    },
-  },
+  // 1. Explicitly define the client app's root directory.
+  root: 'client',
+
+  // 2. Configure the build output directory relative to the project root.
   build: {
     outDir: '../dist/spa',
     emptyOutDir: true,
   },
-  resolve: { // <-- Add this 'resolve' section
+
+  // 3. Manually and explicitly define the path alias.
+  resolve: {
     alias: {
-      '@': path.resolve(__dirname, './client'), // <-- This is the explicit rule
+      '@': path.resolve(__dirname, './client'),
     },
   },
+
   plugins: [
     react(),
-    // We are no longer using tsconfigPaths, so it can be removed.
   ],
 });
