@@ -26,7 +26,7 @@ const App = () => (
   <Route path="/loading" element={<Loading />} />
   <Route path="/course/:id" element={<Course />} />
 
-  {/* 🔽 Add these two lines below */}
+  
   <Route path="/generate" element={<CoursePromptPage />} />
   <Route path="/course-viewer" element={<CourseViewerPage />} />
 

@@ -49,7 +49,7 @@ export default function Index() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-brand-50 via-white to-purple-50">
-      {/* Header */}
+      
       <nav className="px-6 py-4 border-b border-border/40 backdrop-blur-sm bg-white/80">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -70,7 +70,7 @@ export default function Index() {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      
       <main className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
@@ -87,7 +87,7 @@ export default function Index() {
             </p>
           </div>
 
-          {/* Main Input */}
+          
           <div className="mb-12">
             <Card className="p-8 max-w-2xl mx-auto shadow-xl border-0 bg-white/80 backdrop-blur-sm">
               <div className="space-y-6">
@@ -115,7 +115,7 @@ export default function Index() {
             </Card>
           </div>
 
-          {/* Suggestions */}
+          
           <div className="mb-16">
             <p className="text-sm text-gray-500 mb-4">
               Try these popular topics:
@@ -135,7 +135,7 @@ export default function Index() {
             </div>
           </div>
 
-          {/* Features */}
+          
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {features.map((feature, index) => (
               <Card

@@ -25,7 +25,7 @@ export default function Loading() {
   const [currentStep, setCurrentStep] = useState(0);
 
   useEffect(() => {
-    // Simulate course generation process
+    
     steps.forEach((step, index) => {
       setTimeout(() => {
         setCurrentStep(index);
@@ -35,7 +35,7 @@ export default function Loading() {
       }, step.delay);
     });
 
-    // Navigate to course page after completion
+    
     setTimeout(() => {
       navigate("/course/1", { state: { topic } });
     }, 8500);
@@ -43,7 +43,7 @@ export default function Loading() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-brand-50 via-white to-purple-50">
-      {/* Header */}
+      
       <nav className="px-6 py-4 border-b border-border/40 backdrop-blur-sm bg-white/80">
         <div className="max-w-6xl mx-auto flex items-center">
           <div className="flex items-center gap-2">
@@ -57,10 +57,10 @@ export default function Loading() {
         </div>
       </nav>
 
-      {/* Loading Content */}
+      
       <main className="px-6 py-20">
         <div className="max-w-2xl mx-auto text-center">
-          {/* Main Animation */}
+          
           <div className="mb-12">
             <div className="relative inline-flex p-8 bg-gradient-to-r from-brand-100 to-purple-100 rounded-3xl mb-8">
               <div className="absolute inset-0 bg-gradient-to-r from-brand-500 to-purple-600 rounded-3xl animate-pulse opacity-20"></div>
@@ -78,7 +78,7 @@ export default function Loading() {
             </p>
           </div>
 
-          {/* Progress Steps */}
+          
           <Card className="p-8 shadow-xl border-0 bg-white/80 backdrop-blur-sm">
             <div className="space-y-6">
               {steps.map((step, index) => {

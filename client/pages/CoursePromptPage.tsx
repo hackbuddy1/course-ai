@@ -15,7 +15,7 @@ export default function CoursePromptPage() {
 });
 
     const data = await response.json();
-    // Store in localStorage or pass to CourseViewer (optional routing logic)
+    
     localStorage.setItem('courseData', JSON.stringify(data));
     window.location.href = '/course-viewer';
   };

@@ -38,9 +38,9 @@ export default function Course() {
   useEffect(() => {
     const fetchCourse = async () => {
       try {
-        //const BASE_URL = import.meta.env.VITE_API_URL;
+        
         const BASE_URL = "https://course-ai-9i5f.onrender.com";
-        console.log("👉 Hitting API at:", BASE_URL);
+        console.log("Hitting API at:", BASE_URL);
         const response = await axios.post<CourseResponse>(`${BASE_URL}/api/generate-course`, {
           prompt: topic,
   });
@@ -110,7 +110,7 @@ export default function Course() {
           {courseData.title}
         </h1>
 
-        {/* Videos Section */}
+  
         {courseData.videos.length > 0 && (
           <>
             <h2 className="text-2xl font-semibold mb-4">📺 Videos</h2>
@@ -144,7 +144,7 @@ export default function Course() {
           </>
         )}
 
-        {/* Documents Section */}
+        
         {courseData.documents.length > 0 && (
           <>
             <h2 className="text-2xl font-semibold mt-10 mb-4">📄 Documents</h2>

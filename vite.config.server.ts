@@ -1,13 +1,13 @@
 import { defineConfig } from "vite";
 import path from "path";
 
-// Server build configuration
+
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "server/index.ts"), // ✅ fixed path
-      name: "node-build", // Optional, just matches your filename
-      fileName: () => "node-build.mjs", // ✅ consistent filename
+      entry: path.resolve(__dirname, "server/index.ts"), 
+      name: "node-build", 
+      fileName: () => "node-build.mjs", 
       formats: ["es"],
     },
     outDir: "dist/server",
